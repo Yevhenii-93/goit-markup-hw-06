@@ -691,6 +691,11 @@ img {
     align-items: baseline;
   }
 }
+@media only screen and (min-width: 1158px) {
+  .footer .container {
+    gap: 0;
+  }
+}
 
 @media only screen and (min-width: 768px) {
   .footer-wrap {
@@ -737,6 +742,7 @@ img {
 @media only screen and (min-width: 768px) {
   .footer-socials {
     text-align: start;
+    margin: 0;
   }
 }
 
@@ -768,7 +774,11 @@ img {
     text-align: start;
   }
 }
-
+@media only screen and (min-width: 1158px) {
+  .footer-subscribe {
+    margin-left: auto;
+  }
+}
 .form-subscribe {
   display: flex;
   flex-direction: column;
