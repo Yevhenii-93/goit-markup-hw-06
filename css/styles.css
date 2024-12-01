@@ -389,6 +389,7 @@ img {
   background-position: center;
   background-size: cover;
 }
+
 @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
     background-image: linear-gradient(
@@ -434,7 +435,6 @@ img {
 @media only screen and (min-width: 1158px) and (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .hero {
-    margin-top: 72px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -673,8 +673,6 @@ img {
     box-shadow: none;
     width: calc((100% - 48px) / 3);
   }
-}
-@media only screen and (min-width: 1158px) {
   .portfolio-item:hover {
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
       0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
@@ -702,12 +700,6 @@ img {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: transform;
   transform: translateY(100%);
-}
-
-@media only screen and (min-width: 320px) and (max-width: 1157px) {
-  .portfolio-item:active .overlay {
-    transform: translateY(0);
-  }
 }
 
 @media only screen and (min-width: 1158px) {
