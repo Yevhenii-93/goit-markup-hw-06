@@ -63,7 +63,9 @@ img {
   width: 100%;
   height: auto;
 }
-
+address {
+  font-style: normal;
+}
 /* #endregion */
 
 /* #region Common */
@@ -102,7 +104,6 @@ img {
   justify-content: center;
   align-items: center;
 
-  padding: 12px;
   width: 40px;
   height: 40px;
   background-color: #4d5ae5;
@@ -311,36 +312,35 @@ img {
 
 /* address */
 
-.adress {
+.address {
   display: none;
 }
 
 @media only screen and (min-width: 768px) {
-  .adress {
+  .address {
     display: block;
-    font-style: normal;
   }
 }
 
-.adress-list {
+.address-list {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
 @media only screen and (min-width: 1158px) {
-  .adress-list {
+  .address-list {
     gap: 40px;
   }
 }
 
 @media only screen and (min-width: 1158px) {
-  .adress-list {
+  .address-list {
     flex-direction: row;
   }
 }
 
-.adress-link {
+.address-link {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.7;
@@ -349,7 +349,7 @@ img {
 }
 
 @media only screen and (min-width: 1158px) {
-  .adress-link {
+  .address-link {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -358,26 +358,33 @@ img {
   }
 }
 
-.adress-item .adress-link {
-  padding: 16px 0;
+.address-item .address-link {
+  padding: 0;
+}
+@media only screen and (min-width: 1158px) {
+  .address-item .address-link {
+    font-weight: 500;
+    padding: 16px 0;
+  }
 }
 
 @media only screen and (min-width: 1158px) {
-  .adress-link:hover,
-  .adress-link:focus {
+  .address-link:hover,
+  .address-link:focus {
     color: #404bbf;
   }
 }
 
-.adress-link:active {
+.address-link:active {
   color: #404bbf;
 }
 /* #endregion */
 
 /* #region Hero */
 .hero {
-  max-width: 1440px;
+  width: 320px;
   margin: 0 auto;
+  padding: 72px 0;
 
   background-color: #2e2f42;
   background-image: linear-gradient(
@@ -402,27 +409,29 @@ img {
 
 @media only screen and (min-width: 768px) {
   .hero {
+    width: 768px;
+    padding: 112px 0;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
       url(../images/hero/hero_tablet@1x.jpg);
   }
-}
-
-@media only screen and (min-width: 768px) and (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-  .hero {
-    background-image: linear-gradient(
-        rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
-      ),
-      url(../images/hero/hero_tablet@2x.jpg);
+  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero/hero_tablet@2x.jpg);
+    }
   }
 }
 
 @media only screen and (min-width: 1158px) {
   .hero {
+    width: 1158px;
+    padding: 188px 0;
     margin-top: 72px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -430,25 +439,23 @@ img {
       ),
       url(../images/hero/hero_desk@1x.jpg);
   }
-}
-
-@media only screen and (min-width: 1158px) and (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-  .hero {
-    background-image: linear-gradient(
-        rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
-      ),
-      url(../images/hero/hero_desk@2x.jpg);
+  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero/hero_desk@2x.jpg);
+    }
   }
 }
+
 .hero .container {
-  padding: 72px 52px;
 }
 
 .hero-title {
-  max-width: 496px;
-  margin: 72px auto;
+  width: 216px;
+  margin: 0 auto 72px;
 
   font-weight: 700;
   font-size: 36px;
@@ -459,7 +466,8 @@ img {
 }
 @media only screen and (min-width: 768px) {
   .hero-title {
-    margin: 112px auto 36px;
+    width: 496px;
+    margin-bottom: 36px;
 
     font-size: 56px;
     line-height: 1.07;
@@ -467,7 +475,7 @@ img {
 }
 @media only screen and (min-width: 1158px) {
   .hero-title {
-    margin: 188px auto 48px;
+    margin-bottom: 48px;
   }
 }
 .hero-btn {
@@ -574,6 +582,7 @@ img {
   }
 }
 .team-item {
+  width: 264px;
   border-radius: 0 0 4px 4px;
   background-color: #fff;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
@@ -732,11 +741,7 @@ img {
 
   background-color: #2e2f42;
 }
-@media only screen and (min-width: 768px) {
-  .footer {
-    padding: 96px 108px;
-  }
-}
+
 @media only screen and (min-width: 1158px) {
   .footer {
     padding: 100px 0;
@@ -750,6 +755,7 @@ img {
 
 @media only screen and (min-width: 768px) {
   .footer .container {
+    padding: 96px 108px;
     flex-direction: row;
     flex-wrap: wrap;
     column-gap: 24px;
@@ -864,7 +870,8 @@ img {
 }
 
 .subscribe-input {
-  width: 264px;
+  width: 288px;
+
   height: 40px;
 
   padding-left: 16px;
@@ -879,6 +886,11 @@ img {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   opacity: 0.3;
   background-color: transparent;
+}
+@media only screen and (min-width: 768px) {
+  .subscribe-input {
+    width: 264px;
+  }
 }
 
 @media only screen and (min-width: 1158px) {
@@ -1093,14 +1105,17 @@ img {
 }
 
 .modal-label-rules {
-  display: inline;
+  display: flex;
+  align-items: center;
   font-weight: 400;
   cursor: pointer;
+  margin-bottom: 24px;
 }
 
 .checkmark {
   position: relative;
   display: inline-flex;
+  flex-shrink: 0;
   justify-content: center;
   align-items: center;
 
@@ -1131,7 +1146,6 @@ img {
   display: block;
   min-width: 169px;
   padding: 16px 32px;
-  margin-bottom: 24px;
 }
 /* #endregion */
 
@@ -1184,7 +1198,20 @@ img {
   pointer-events: auto;
   transform: translateX(0);
 }
-
+@media only screen and (min-width: 768px) {
+  .menu {
+    display: none;
+  }
+}
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0 auto;
+}
+.mobile-nav {
+  margin-bottom: auto;
+}
 .mobile-menu-list {
   display: flex;
   flex-direction: column;
@@ -1193,24 +1220,29 @@ img {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
-
-  margin-bottom: auto;
 }
 
-.menu-link {
-  padding: 40px 0;
-}
 .menu-link:active,
-.menu-adress-link:active {
+.menu-address-link:active {
   color: #404bbf;
 }
 
-.mobile-menu-contacts {
+.menu-contacts-link {
   font-size: 20px;
+
+  color: #434455;
 }
-.menu-contacts {
+.active-contact {
+  color: #4d5ae5;
+}
+.menu-contacts:first-child {
   margin-bottom: 24px;
 }
+
+.mobile-address {
+  margin-bottom: 48px;
+}
+
 .menu .socials-list {
   justify-content: start;
   gap: 40px;
