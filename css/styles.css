@@ -755,7 +755,7 @@ address {
 
 @media only screen and (min-width: 768px) {
   .footer .container {
-    padding: 96px 108px;
+    padding: 0 108px;
     flex-direction: row;
     flex-wrap: wrap;
     column-gap: 24px;
@@ -764,6 +764,7 @@ address {
 }
 @media only screen and (min-width: 1158px) {
   .footer .container {
+    padding: 0 15px;
     gap: 0;
   }
 }
