@@ -382,7 +382,8 @@ address {
 
 /* #region Hero */
 .hero {
-  width: 320px;
+  min-width: 320px;
+
   margin: 0 auto;
   padding: 72px 0;
 
@@ -409,7 +410,6 @@ address {
 
 @media only screen and (min-width: 768px) {
   .hero {
-    width: 768px;
     padding: 112px 0;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -430,7 +430,7 @@ address {
 
 @media only screen and (min-width: 1158px) {
   .hero {
-    width: 1158px;
+    max-width: 1440px;
     padding: 188px 0;
     margin-top: 72px;
     background-image: linear-gradient(
@@ -572,6 +572,7 @@ address {
 .team-list {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 72px;
 }
 @media only screen and (min-width: 768px) {
